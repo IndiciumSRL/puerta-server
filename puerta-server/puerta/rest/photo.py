@@ -5,9 +5,9 @@ import datetime
 from flask import send_from_directory
 from flask import Flask, request, session, g, redirect, abort
 
-from models import PhotoFile, User
-from app import app, db, api
-from lib.auth import Resource
+from puerta.models import PhotoFile, User
+from puerta.app import app, db, api
+from puerta.lib.auth import Resource
 
 log = logging.getLogger(__name__)
 

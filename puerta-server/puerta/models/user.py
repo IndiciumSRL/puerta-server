@@ -3,7 +3,7 @@ import logging
 
 import bcrypt
 
-from app import db
+from puerta.app import db
 
 log = logging.getLogger(__name__)
 

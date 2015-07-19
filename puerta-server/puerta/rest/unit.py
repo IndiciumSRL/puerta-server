@@ -6,8 +6,8 @@ from sqlalchemy.orm.exc import NoResultFound
 from flask import Flask, request, session, g, redirect, abort
 from flask_restful import Resource
 
-from app import db, api, app
-from models import Unit
+from puerta.app import db, api, app
+from puerta.models import Unit
 
 log = logging.getLogger(__name__)
 
