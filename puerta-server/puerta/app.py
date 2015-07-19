@@ -26,7 +26,8 @@ app.session_interface = ItsdangerousSessionInterface()
 db = SQLAlchemy(app)
 api = Api(app)
 
-from rest import *
+from puerta.rest import *
+from puerta.models import *
 
 if __name__ == '__main__':
     handler = logging.StreamHandler()
@@ -34,15 +35,15 @@ if __name__ == '__main__':
     app.logger.addHandler(handler)
     
     if len(sys.argv)>1:
-        from models import User, Unit
+        print 'This is lazy loading?'
         db.create_all()
         u = User(u'Admin', u'admin@admin.com', u'admin')
         u.role = u'admin'
         u.approved = True
-        u.who_approved = 'Admin'
+        u.who_approved = u'Admin'
         db.session.add(u)
 
-        for unit in ['Nido', 'Prisma', 'Puerta']:
+        for unit in [u'Nido', u'Prisma', u'Puerta']:
             db.session.add(Unit(unit))
 
         db.session.commit()

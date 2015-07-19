@@ -5,7 +5,8 @@ import datetime
 from flask import send_from_directory
 from flask import Flask, request, session, g, redirect, abort
 
-from puerta.models import PhotoFile, User
+from puerta.models.user import User
+from puerta.models.album import PhotoFile
 from puerta.app import app, db, api
 from puerta.lib.auth import Resource
 

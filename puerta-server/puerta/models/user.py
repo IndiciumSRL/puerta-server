@@ -24,7 +24,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     fullname = db.Column(db.Unicode(255), unique=False, nullable=False)
     email = db.Column(db.Unicode(255), unique=True, nullable=False)
-    password = db.Column(db.Unicode(255), unique=False, nullable=False)
+    password = db.Column(db.String, unique=False, nullable=False)
     mail_notifications = db.Column(db.Boolean, unique=False, default=True)
     approved = db.Column(db.Boolean, unique=False, default=False)
     who_approved = db.Column(db.Unicode(255), unique=False, nullable=True)
