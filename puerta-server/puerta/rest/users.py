@@ -2,9 +2,9 @@ import logging
 
 from flask import Flask, request, session, g, redirect, abort
 
-from app import db, api, app
-from models import User
-from lib.auth import Resource
+from puerta.app import db, api, app
+from puerta.models import User
+from puerta.lib.auth import Resource
 
 log = logging.getLogger(__name__)
 
